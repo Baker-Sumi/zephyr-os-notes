@@ -21,6 +21,7 @@
 - 公開する原稿は`docs/`に置き、GitHub Flavored Markdownを基本として記述する。ObsidianのVault、Wikiリンク、callout、Canvas、埋め込み構文には依存しない。
 - 記事間のリンクは`[表示名](相対パス.md)`の通常の相対Markdownリンクを使う。公開先とGitHub上の原稿の両方で解決することを確認し、次に読むべきドキュメントへリンクする。
 - 図は標準の`mermaid`コードフェンスで記述してよい。公開時の描画は`requirements-site.txt`で固定したMkDocs Materialと`mkdocs.yml`の`pymdownx.superfences`設定に依存する。図の意味は本文でも説明する。
+- 補足、注意、ヒントの強調には、`mkdocs.yml`で有効化したMkDocs Material 9.7.7の`admonition`拡張を使える。`!!! note "見出し"`、`!!! warning "見出し"`、`!!! tip "見出し"`の形式で記述し、本文は四つの空白で字下げする。`> [!tip]`のGitHub/Obsidian構文は使わない。GitHub上では通常の段落として読めるよう、本文だけでも意味を完結させる。
 - 強調、引用、表、コードブロックなどは標準Markdownの構文だけで意味が伝わるようにする。特定の表示拡張を追加する場合は、採用するパッケージとバージョン、設定場所、拡張が利用できない場合の意味をこのファイルに明記する。
 - 見出し、ファイル名、リンク先は安定させ、既存のリンクを壊さない。名称変更時は参照元をすべて更新する。
 
