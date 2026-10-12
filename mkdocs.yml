@@ -1,0 +1,81 @@
+site_name: Zephyr内部構造解説
+site_description: Zephyr RTOSの内部構造を学ぶ日本語ノート
+site_url: https://baker-sumi.github.io/zephyr-os-notes/
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: ja
+  features:
+    - navigation.footer
+    - navigation.path
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+    - search.suggest
+
+plugins:
+  - search
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - toc:
+      permalink: true
+
+nav:
+  - ホーム: index.md
+  - はじめに:
+      - 索引: 00-はじめに/00-索引.md
+      - このノートの読み方: 00-はじめに/01-このノートの読み方.md
+      - 用語集: 00-はじめに/02-用語集.md
+  - Cの基礎:
+      - Cの最小基礎: 01-Cの基礎/00-Cの最小基礎.md
+      - ポインタと構造体: 01-Cの基礎/01-ポインタと構造体.md
+      - Zephyrの実装パターン: 01-Cの基礎/02-Zephyrの実装パターン.md
+  - 開発環境:
+      - この章について: 02-開発環境/00-この章について.md
+      - nRF Connect for VS Codeで観察する: 02-開発環境/01-nRF Connect for VS Codeで観察する.md
+      - 導入手順と確認: 02-開発環境/02-導入手順と確認.md
+      - ワークスペースの構造: 02-開発環境/03-ワークスペースの構造.md
+      - ツールチェーンと開発ツール: 02-開発環境/04-ツールチェーンと開発ツール.md
+      - 成果物を読む: 02-開発環境/05-成果物を読む.md
+      - 開発・解析コマンド: 02-開発環境/06-開発・解析コマンド.md
+  - ソースツリー:
+      - ソースツリー地図: 03-ソースツリー/00-ソースツリー地図.md
+  - ビルドと設定:
+      - ビルドパイプライン: 04-ビルドと設定/00-ビルドパイプライン.md
+      - Kconfig: 04-ビルドと設定/01-Kconfig.md
+      - Devicetree: 04-ビルドと設定/02-Devicetree.md
+  - カーネル:
+      - この章について: 05-カーネル/00-この章について.md
+      - 初期化: 05-カーネル/01-初期化.md
+      - 実行コンテキスト: 05-カーネル/02-実行コンテキスト.md
+      - スケジューリングと同期: 05-カーネル/03-スケジューリングと同期.md
+      - メモリ管理: 05-カーネル/04-メモリ管理.md
+  - ハードウェア抽象化:
+      - この章について: 06-ハードウェア抽象化/00-この章について.md
+      - デバイスモデル: 06-ハードウェア抽象化/01-デバイスモデル.md
+  - サブシステム:
+      - この章について: 07-サブシステム/00-この章について.md
+      - 機能地図: 07-サブシステム/01-機能地図.md
+      - ログ: 07-サブシステム/02-ログ.md
+  - 追跡演習:
+      - この章について: 08-追跡演習/00-この章について.md
+      - 導入環境からBlinkyを追う: 08-追跡演習/01-導入環境からBlinkyを追う.md
+      - Blinkyの設定差分を観察する: 08-追跡演習/02-Blinkyの設定差分を観察する.md
+      - GPIO呼び出しを追う: 08-追跡演習/03-GPIO呼び出しを追う.md
+      - UARTとコンソールを追う: 08-追跡演習/04-UARTとコンソールを追う.md
+      - 実行コンテキストを観察する: 08-追跡演習/05-実行コンテキストを観察する.md
+      - ボード差分を観察する: 08-追跡演習/06-ボード差分を観察する.md
